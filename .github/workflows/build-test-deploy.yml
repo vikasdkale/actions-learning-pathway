@@ -12,7 +12,6 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm install
-      - run: npm i -D @next/eslint-plugin-next
       - run: npm run build
   test:
     needs: build
@@ -25,4 +24,5 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm install
+      - run: npm i -D @next/eslint-plugin-next
       - run: npm test
